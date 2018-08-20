@@ -10,12 +10,19 @@
         <p>
             Vérification et affichage des paramètres de l'URL:
             <?php
-            if (isset($_GET['language']) && isset($_GET['server'])) {
-              // Affichage des infos
-                echo $_GET['language'] . ' ' . $_GET['server'];
+            if (!empty($_GET['language'])) {
+                // Affichage de la variable
+                echo $_GET['language'] . ' ' ;
             } else {
-              // Affichage au visiteur
-                echo 'Renseignez language et serveur, svp.';
+                // Affichage au visiteur du manque
+                echo 'Il manque le parametre language, svp.';
+            }
+            if(!empty($_GET['server'])) {
+                // Affichage de la variable
+                echo $_GET['server'] ;
+            } else {
+                // Affichage au visiteur du manque
+                echo 'Il manque le parametre serveur, svp.';
             }
             ?>
         </p>

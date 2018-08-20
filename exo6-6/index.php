@@ -10,7 +10,7 @@
         <p>
             Vérification et affichage des paramètres de l'URL:
             <?php
-            if (isset($_GET['building']) & isset($_GET['room'])) {
+            if (!empty($_GET['building']) & !empty($_GET['room'])) {
               // Affichage des infos
                 echo 'Bâtiment : ' . $_GET['building'] . ' Chambre : ' . $_GET['room'];
             } else {

@@ -10,12 +10,12 @@
         <p>
             Vérification et affichage des paramètres de l'URL:
             <?php
-            if (isset($_GET['week'])) {
+            if (!empty($_GET['week'])) {
               // Affichage de la semaine
                 echo $_GET['week'];
             } else {
               // Affichage au visiteur
-                echo ' Quelle semaine, svp?';
+                echo ' Il manque le parametre semaine, svp?';
             }
             ?>
         </p>
